@@ -1,0 +1,29 @@
+{
+    "database": "ex-resource:databaseBase_DW",
+    "dimensions": [
+        {
+            "class": "dbpedia:State",
+            "table": "dimension_localestadoibge",
+            "title": "Dimensão de localidade do IBGE",
+            "description": "Descrição extra sobre a tabela ...",
+            "fields": [
+                {
+                    "name": "coufibge",
+                    "title": "Codigo Unidade Federal no IBGE",
+                    "description": "Descrição extra sobre a coluna ..."
+                },
+                {
+                    "property": "rdfs:label",
+                    "name": "noufibge",
+                    "title": "Nome Unidade Federal no IBGE",
+                    "description": "Descrição extra sobre a coluna ..."
+                },
+                {
+                    "name": "sgufibge",
+                    "title": "Sigla Unidade Federal no IBGE",
+                    "description": "Descrição extra sobre a coluna ..."
+                }
+            ]
+        }
+    ]
+}
