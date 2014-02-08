@@ -1,14 +1,14 @@
 # coding: utf-8
+from flask_testing import TestCase
+from flask import Flask
+from olap2datacube.mediator import app
 
 __author__ = 'rodsenra'
 
-from flask_testing import TestCase
 
-
-def TestMediator(TestCase):
+class TestMediator(TestCase):
 
     def create_app(self):
-        app = Flask(__name__)
         return app
 
     def test_request_generateDimInstances(self):
@@ -17,4 +17,4 @@ def TestMediator(TestCase):
                     "/generateDimInstances",
                     content_type="application/json",
                     data=input_data)
-        self.assertEquals(response.status_code, 200)
+        self.assert200(response)

@@ -1,7 +1,7 @@
 # coding: utf-8
 __author__ = 'rodsenra'
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, Response
 from functools import wraps
 
 app = Flask(__name__)
@@ -27,7 +27,7 @@ def validate_json(f):
             return error(400, "required parameter missing", {"parameter": {"file": request.data}})
 
 
-@app.route("/generateDimInstances")
+@app.route("/generateDimInstances", methods=['POST'])
 #@validate_json
 def generateDimInstances():
     return Response(status=200)
