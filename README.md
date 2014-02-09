@@ -24,6 +24,6 @@ From the root execute make test.
 Running
 -------
 
-make run_mediator
-make run_catalogue
+    * make run_mediator
+    * make run_catalogue
 

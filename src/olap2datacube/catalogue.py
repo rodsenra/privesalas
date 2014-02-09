@@ -35,5 +35,17 @@ def getModelRDB():
         mocked_response = json.load(open('examples/response_catalogue_getModelRDB.json'))
         return jsonify(mocked_response)
 
+@app.route("/generateTriples", methods=['GET'])
+def generateTriples():
+    if request.method == 'GET':
+        model_id = request.args.get('model_id', None)
+        if model_id is None:
+            return error(400, "Parameter model_id must is mandatory")
+
+        # TODO: generate Triples here
+
+        return Response(status=200)
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5001, debug=True)

@@ -41,3 +41,11 @@ class TestCatalogue(TestCase):
                     content_type="application/x-sql",
                     data="Select * from Table X")
         self.assert400(response)
+
+    def test_valid_generateTriples(self):
+        response = self.client.get("/generateTriples?model_id=1011")
+        self.assert200(response)
+
+    def test_invalid_generateTriples_no_model_id(self):
+        response = self.client.get("/generateTriples")
+        self.assert400(response)
