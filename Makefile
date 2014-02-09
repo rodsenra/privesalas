@@ -9,5 +9,8 @@ clean:
 run_mediator:
 	PYTHONPATH="$(NEW_PYTHONPATH)" python -m olap2datacube.mediator
 
+run_catalogue:
+	PYTHONPATH="$(NEW_PYTHONPATH)" python -m olap2datacube.catalogue
+
 test:
 	@nosetests -s --tests=tests

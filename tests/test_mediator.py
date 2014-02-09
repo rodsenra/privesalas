@@ -1,6 +1,5 @@
 # coding: utf-8
 from flask_testing import TestCase
-from flask import Flask
 from olap2datacube.mediator import app
 
 __author__ = 'rodsenra'
@@ -23,4 +22,11 @@ class TestMediator(TestCase):
         response = self.client.post(
                     "/generateDimInstances",
                     content_type="application/json")
+        self.assert400(response)
+
+    def test_invalid_generateDimInstances_invalid_payload(self):
+        response = self.client.post(
+                    "/generateDimInstances",
+                    content_type="application/json",
+                    data='invalid payload')
         self.assert400(response)
