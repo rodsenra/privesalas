@@ -10,9 +10,9 @@ app = Flask(__name__)
 @app.route("/generateDimInstances", methods=['POST'])
 def generateDimInstances():
     if request.method == 'POST':
-        error = validate_json(request)
-        if error is not None:
-            return error
+        validation_error = validate_json(request)
+        if validation_error is not None:
+            return validation_error
 
         return Response(status=200)
 

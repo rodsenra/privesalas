@@ -1,0 +1,43 @@
+{
+    "list_of_models": [
+        {
+            "model_id": "1011",
+            "title": "Empregos criados",
+            "description": "Empregos criados desde janeiro de 2003 até o ano selecionado.",
+            "tables": [
+                {
+                    "table": "dimension_localestadoibge",
+                    "title": "Dimensão de localidade do IBGE",
+                    "description": "Descrição extra sobre a tabela ...",
+                    "topics": [
+                        "1",
+                        "2"
+                    ],
+                    "fields": [
+                        {
+                            "name": "coufibge",
+                            "title": "Codigo Unidade Federal no IBGE",
+                            "description": "Descrição extra sobre a coluna ..."
+                        },
+                        {
+                            "name": "noufibge",
+                            "title": "Nome Unidade Federal no IBGE",
+                            "description": "Descrição extra sobre a coluna ...",
+                            "topics": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "name": "sgufibge",
+                            "title": "Sigla Unidade Federal no IBGE",
+                            "description": "Descrição extra sobre a coluna ..."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "model_id": "…"
+        }
+    ]
+}
