@@ -8,4 +8,17 @@ Install
 -------
 
  * mkvirtualenv privesalas
- * pip install -r requirements.txt
+ * make install
+
+
+Testing
+-------
+
+From the root execute make test.
+
+
+Running
+-------
+
+make run_mediator
+
